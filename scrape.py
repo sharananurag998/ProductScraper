@@ -26,11 +26,11 @@ for a in soup.findAll('a', href=True, attrs={'class': '_31qSD5'}):
     prices.append(price.text)
     ratings.append(rating.text)
 
-# df = pd.DataFrame({'Product Name': products, 'Price': prices, 'Rating': ratings})
-# df.to_csv('products.csv', index='False', encoding='utf-8-sig')
-#
-# readDf = pd.read_csv(filepath_or_buffer='products.csv', skiprows=1)
-# print(readDf.head(5))
+df = pd.DataFrame({'Product Name': products, 'Price': prices, 'Rating': ratings})
+df.to_csv('products.csv', index='False', encoding='utf-8-sig')
+
+readDf = pd.read_csv(filepath_or_buffer='products.csv', skiprows=1)
+print(readDf.head(5))
 
 
 
